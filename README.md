@@ -138,6 +138,8 @@ In our use of Swagger-UI we came across one issue though.  Swagger-UI is only go
 
 Well one handy thing about a specification is that, well its a specification.  This means as developers we know it follows very specific rules.  We can write tools that interact with that specification.  So I decided to write a Swagger-to-Markdown script.  This script can be found here https://github.com/Skookum/SwaggerToMarkdown/blob/master/swagger-to-markdown.rb.  It takes a number of parameters, but the main parameters it takes is the Swagger specification for your API.  It will traverse your specification and generate a static Markdown file that contains a lot of the same information as the dynamic Swagger-UI tool.  It writes out all the operations, their arguments, their error codes, and will even perform curl operations to generate example responses and example requests.  Here is an example markdown file that was generated with our script.
 
+    ./swagger-to-markdown.rb -r resources.json -p parameters.json -n Demo -o test.md -s pet.json
+
 #Demo 0.2 REST API
 Base Path: http://petstore.swagger.wordnik.com/api
 
