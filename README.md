@@ -68,67 +68,8 @@ We all agree a REST service specification is a great tool to streamline and enha
           ]
         }
       ]
-    },
-    {
-      "path":"/store.{format}/order",
-      "description":"Operations about store",
-      "operations":[
-        {
-          "httpMethod":"POST",
-          "summary":"Place an order for a pet",
-          "responseClass":"void",
-          "nickname":"placeOrder",
-          "parameters":[
-            {
-              "description":"order placed for purchasing the pet",
-              "paramType":"body",
-              "required":true,
-              "allowMultiple":false,
-              "dataType":"Order"
-            }
-          ],
-          "errorResponses":[
-            {
-              "code":400,
-              "reason":"Invalid order"
-            }
-          ]
-        }
-      ]
     }
-  ],
-  "models":{
-    "Order":{
-      "id":"Order",
-      "properties":{
-        "id":{
-          "type":"long"
-        },
-        "petId":{
-          "type":"long"
-        },
-        "status":{
-          "allowableValues":{
-            "valueType":"LIST",
-            "values":[
-              "placed",
-              " approved",
-              " delivered"
-            ],
-            "valueType":"LIST"
-          },
-          "description":"Order Status",
-          "type":"string"
-        },
-        "quantity":{
-          "type":"int"
-        },
-        "shipDate":{
-          "type":"Date"
-        }
-      }
-    }
-  }
+  ]
 }
 ```
 
