@@ -7,6 +7,7 @@ require 'net/http'
 require 'titleize'
 require 'optparse'
 require 'ostruct'
+require 'open-uri'
 
 class SwaggerToMarkdown
   def self.enhance(options)
@@ -189,7 +190,7 @@ class SwaggerToMarkdown
   end
 
   def self.extract_json(file_name)
-    file = File.open(file_name)
+    file = open(file_name)
     json = JSON.parse(file.read)
   end
 
