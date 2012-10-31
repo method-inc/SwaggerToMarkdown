@@ -85,6 +85,8 @@ or reading from a remote server:
 
     ./swagger-to-markdown.rb -r resources.json -p parameters.json -n Demo -o test.md -s http://petstore.swagger.wordnik.com/api/pet.json
 
+One thing to note is that this remote read is not performing any type of validation so please use this only on trusted resources.
+
 #Demo 0.2 REST API
 Base Path: http://petstore.swagger.wordnik.com/api
 
