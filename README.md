@@ -81,6 +81,10 @@ Well one handy thing about a specification is that, well its a specification.  T
 
     ./swagger-to-markdown.rb -r resources.json -p parameters.json -n Demo -o test.md -s pet.json
 
+or reading from a remote server:
+
+    ./swagger-to-markdown.rb -r resources.json -p parameters.json -n Demo -o test.md -s http://petstore.swagger.wordnik.com/api/pet.json
+
 #Demo 0.2 REST API
 Base Path: http://petstore.swagger.wordnik.com/api
 
